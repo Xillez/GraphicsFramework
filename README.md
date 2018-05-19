@@ -1,6 +1,6 @@
 # Graphics project framework
 
-Kent Wincent Holt - 473209 - kentwh@stud.ntnu.no
+Xillez - kent.wincent46@gmail.com
 
 ### Introduction
 
