@@ -5,14 +5,16 @@
 
 extern game::Glider* glider;
 
-environment::Camera::Camera(glm::vec3 pos, glm::vec3 target, glm::vec3 up, float fov) {
+environment::Camera::Camera(glm::vec3 pos, glm::vec3 target, glm::vec3 up, float fov)
+{
 	this->pos = pos;
 	this->target = target;
 	this->up = up;
 	this->fov = fov;
 }
 
-glm::vec2 environment::Camera::windowSize(){
+glm::vec2 environment::Camera::windowSize()
+{
 	
 	const GLFWvidmode* videoMode = glfwGetVideoMode(glfwGetPrimaryMonitor());
 
@@ -23,7 +25,7 @@ glm::vec2 environment::Camera::windowSize(){
 auto environment::Camera::update() -> void
 {
 	// If camera is locking to the glider
-	if (this->lockToGlider)
+	/*if (this->lockToGlider)
 	{
 		// Translate the camera to origin + camera arm (for rotation)
 		this->pos = this->camArm;
@@ -41,9 +43,9 @@ auto environment::Camera::update() -> void
 		this->target = glm::normalize(glider->getPos() - this->pos);
 	}
 	else
-	{
+	{*/
 		this->up = glm::vec3(0.0f, 1.0f, 0.0f);
-	}
+	//}
 }
 
 void environment::Camera::setPos(glm::vec3 pos){
@@ -81,8 +83,8 @@ glm::mat4 environment::Camera::getPerspectiveMatrix(){
 void environment::Camera::rotateBy(float angleX, float angleY)
 {
 	// If user tries to move the camera whilest locked, return.
-	if (lockToGlider)
-		return;	
+	//if (lockToGlider)
+	//	return;	
 	
 	// Get rotation matrix for "angle" amount, around horizontal rotation axis (0, 1, 0).
 	glm::mat4 rotationHorMatrix = glm::rotate(glm::mat4(), angleX, horRotAxis);
@@ -115,16 +117,16 @@ void environment::Camera::translateBy(glm::vec3 translate){
 	//this->pos = (glm::vec3) (translationMatrix * glm::vec4(pos, 0));
 	
 	// If user tries to move the camera whilest locked, return.
-	if (lockToGlider)
-		return;	
+	//if (lockToGlider)
+	//	return;	
 	
 	this->pos += translate;
 }
 
 auto environment::Camera::toggleLockToGlider(glm::vec3 camArm) -> void
 {
-	this->lockToGlider = !this->lockToGlider;
-	this->camArm = camArm;
+	//this->lockToGlider = !this->lockToGlider;
+	//this->camArm = camArm;
 }
 
 auto environment::Camera::zoom(bool in) -> void
