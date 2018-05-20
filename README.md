@@ -66,9 +66,8 @@ A lightweight graphics framework, using OpengGL as Graphics API and GLFW as wind
   - Add mirroring / continuity of terrain "tiles". (LOW)
 - Camera:
   - 1st person cam on objects (Add a camera (maybe component) that will override the current state of the true camera). (MEDIUM 2.)
-  - 3rd person cam (See 1st person idea). (MEDIUM 2.)
-  - Snapping to object
-  - Smoothing / LERPING / SLERPING of positional change. (MEDIUM 1.)
+  - 3rd person cam on objects (See 1st person idea). (MEDIUM 2.)
+  - Smoothing / LERPING / SLERPING of positional change / object locking or switching. (MEDIUM 1.)
 - Make UI system (Using YAML / (XML, maybe)):
   - Load layout file and build the UI with it that. (MEDIUM 1.)
   - Add programmatic layout specification. (MEDIUM 1.)
