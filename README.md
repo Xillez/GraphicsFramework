@@ -29,7 +29,6 @@ A lightweight graphics framework, using OpengGL as Graphics API and GLFW as wind
    mkdir build && cd build
    ```
 
-   
 
 3. Build the program: 
   ```Shell
@@ -49,7 +48,7 @@ A lightweight graphics framework, using OpengGL as Graphics API and GLFW as wind
 
 ### TODO:
 
-- Add support for multiple build methods. (HIGH) 
+- Add support for multiple build methods. (VERY HIGH) 
 - Input handling system: 
   - Redo entire input handling system. (VERY HIGH)
   - Add support for multikey input. (VERY HIGH)
@@ -58,7 +57,7 @@ A lightweight graphics framework, using OpengGL as Graphics API and GLFW as wind
 - Map generation:
   - Make image resolution independent. (MEDIUM 1.)
     - Add size specification for terrain. (LOW)
-  - Make perlin-noise terrain generator if selected. (MEDIUM 2.)
+  - Make perlin-noise terrain generator if selected. (LOW)
 - Terrain:
   - Texture terrain. (LOW)
   - Fix smoothing (TESSELLATION SHADER). (MEDIUM 1.)
@@ -75,7 +74,7 @@ A lightweight graphics framework, using OpengGL as Graphics API and GLFW as wind
   - Add Phong lighting with phong shading. (LOW)
   - Make user able to choose phong or flat shading. (VERY LOW)
 - Shadows
-  - Implement shadows. (LOW)
-  - Allow user to choose face or pixel shadowing. (VERY LOW)
+  - Implement shadows (shadow mapping). (LOW)
+  - Allow user to choose face or pixel-based shadowing. (VERY LOW)
 - Viewports:
   - Add viewports for game development / minimap etc... (LOW).
