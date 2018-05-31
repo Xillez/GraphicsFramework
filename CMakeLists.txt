@@ -26,7 +26,7 @@ add_executable("Exam"
 	${PROJECT_SOURCE_DIR}/source/imgui/imgui_draw.cpp
 	${PROJECT_SOURCE_DIR}/source/imgui/imgui_impl_glfw_gl3.cpp
 
-	#environment
+		#environment
 	${PROJECT_SOURCE_DIR}/source/environment/Camera.cpp
 	${PROJECT_SOURCE_DIR}/source/environment/LightSource.cpp
 
@@ -87,9 +87,14 @@ if(DOXYGEN_FOUND)
 	set(DOXYGEN_OUT ${PROJECT_BINARY_DIR}/Doxyfile)
 
 	# Setting folders to generate documentation for
+	set(DOXYGEN_EXCLUDE_PATTERNS
+		"*/.git/*
+		*/CMakeFiles/*
+		CMakeLists.txt
+		${PROJECT_SOURCE_DIR}/source/imgui/*
+		")
 	set(DOXYGEN_INPUT 
-		"${PROJECT_SOURCE_DIR}/source ${PROJECT_SOURCE_DIR}/doc"
-	)
+		"${PROJECT_SOURCE_DIR}/source ${PROJECT_SOURCE_DIR}/doc")
 	set(DOXYGEN_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/doc)
 	set(DOXYGEN_INCLUDE_GRAPH YES)
 
