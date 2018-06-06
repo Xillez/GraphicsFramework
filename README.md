@@ -12,7 +12,8 @@ A lightweight graphics framework, using OpengGL as Graphics API and GLFW as wind
 - SOIL - Texture/Image loading - http://www.lonesock.net/files/soil.zip
 - GLFW 3.0 - Windowing framework - http://www.glfw.org/download.html
 - ImGUI - Lightweight GUI library - https://github.com/ocornut/imgui/releases
-- GLEW - Binding to opengl - http://glew.sourceforge.net/
+- GLEW - Binding to OpenGL - http://glew.sourceforge.net/
+- GLM - OpenGL Math Library - https://glm.g-truc.net/0.9.9/index.html
 
 ### Tools used:
 
