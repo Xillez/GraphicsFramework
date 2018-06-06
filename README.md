@@ -20,6 +20,7 @@ A lightweight graphics framework, using OpengGL as Graphics API and GLFW as wind
 - CMake - https://cmake.org/download/
 - Make - http://gnuwin32.sourceforge.net/packages/make.htm
 - Doxygen - http://www.stack.nl/~dimitri/doxygen/download.html
+- Dot(graphviz) - http://www.graphviz.org/download/
 
 ### Installation / Usage
 1. Install linux (supports only linux for now).
