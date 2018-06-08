@@ -8,17 +8,19 @@ A lightweight graphics framework, using OpengGL as Graphics API and GLFW as wind
 
 ### Libraries used:
 
-- SOIL - Texture/Image loading - Put link here!
-- GLFW 3.0 - Windowing framework - Put link here!
-- ImGUI - Lightweight GUI library - Put link here!
-- OpenGL 4.5 - Graphics Library - Put link here!
-- GLEW - Binding to opengl - Put link here!
+- OpenGL 4.5
+- SOIL - Texture/Image loading - http://www.lonesock.net/files/soil.zip
+- GLFW 3.0 - Windowing framework - http://www.glfw.org/download.html
+- ImGUI - Lightweight GUI library - https://github.com/ocornut/imgui/releases
+- GLEW - Binding to OpenGL - http://glew.sourceforge.net/
+- GLM - OpenGL Math Library - https://glm.g-truc.net/0.9.9/index.html
 
 ### Tools used:
 
-- CMake
-- Make
-- Doxygen
+- CMake - https://cmake.org/download/
+- Make - http://gnuwin32.sourceforge.net/packages/make.htm
+- Doxygen - http://www.stack.nl/~dimitri/doxygen/download.html
+- Dot(graphviz) - http://www.graphviz.org/download/
 
 ### Installation / Usage
 1. Install linux (supports only linux for now).
