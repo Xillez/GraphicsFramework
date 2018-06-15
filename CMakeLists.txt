@@ -98,7 +98,7 @@ endif(WIN32)
 if(UNIX)
 	find_package(GLEW REQUIRED)
 	find_package(OpenGL REQUIRED)
-	find_package(glfw3 REQUIRED)
+	find_package(glfw3 3.2 REQUIRED)
 	find_package(assimp REQUIRED)
 	find_library(SOIL SOIL /usr/include/SOIL)
 	
@@ -106,7 +106,7 @@ if(UNIX)
 	target_link_libraries(${PROJECT_NAME}
 		PRIVATE ${OPENGL_LIBRARIES}
 		PRIVATE ${GLEW_LIBRARY}
-		PRIVATE glfw3
+		PRIVATE glfw
 		PRIVATE assimp
 		PRIVATE ${SOIL}
 	)
@@ -133,12 +133,8 @@ if(DOXYGEN_FOUND)
 	set(DOXYGEN_OUT ${PROJECT_BINARY_DIR}/Doxyfile)
 
 	# Setting folders to generate documentation for
-	set(DOXYGEN_EXCLUDE_PATTERNS
-		"*/.git/*
-		*/CMakeFiles/*
-		CMakeLists.txt
-		${PROJECT_SOURCE_DIR}/source/imgui/*
-		")
+	set(DOXYGEN_EXCLUDE_PATTERNS 
+		"*/.git/* */CMakeFiles/* CMakeLists.txt ${PROJECT_SOURCE_DIR}/source/imgui/*")
 	set(DOXYGEN_INPUT 
 		"${PROJECT_SOURCE_DIR}/source ${PROJECT_SOURCE_DIR}/doc")
 	set(DOXYGEN_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/doc)
@@ -168,7 +164,6 @@ if(DOXYGEN_FOUND)
 	#set_target_properties(doc_doxygen
 	#	PROPERTIES
 	#	DOXYGEN_INPUT ""
-	#	DOXYGEN_EXCLUDE_PATTERNS
 	#	DOXYGEN_OUTPUT_DIRECTORY
 	#)
 else()
