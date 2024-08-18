@@ -1,7 +1,5 @@
 # Graphics project framework
 
-Xillez - kent.wincent46@gmail.com
-
 ### Introduction
 
 A lightweight graphics framework, using OpengGL as Graphics API and GLFW as windowing framework and ImGUI as GUI API.
